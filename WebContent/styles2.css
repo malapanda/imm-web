@@ -1,0 +1,203 @@
+.no-support-message { display:none; }
+.impress-not-supported .no-support-message { display:block; }
+
+body {
+    
+	line-height: 1;
+	font-family: 'PT Sans', sans-serif;
+    min-height: 740px;
+	background-image: url("dots_dark.png"); 
+	font:36px/50px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial,"Lucida Grande", sans-serif; 
+	color:#FFF;
+
+}
+
+img{
+	height: 100px;
+	padding-top: 10px;
+	border-top-left-radius: 15px; 
+    border-top-right-radius: 15px; 
+    border-bottom-left-radius: 15px; 
+    border-bottom-right-radius: 15px;
+	opacity: 0.9;
+}
+
+.step {
+    position: relative;
+	width: 320px;
+	padding: 30px;
+	margin:0 auto 50px auto; 
+	box-sizing:border-box;
+	background-color: #873571; /*green: 598735, blue: 355E87, red: 873543, rapsberry: 873571, purple: 683587, turquise: 357D87*/
+	-moz-border-radius: 15px / 15px;
+	-webkit-border-radius: 15px / 15px;
+	border-radius: 15px / 15px;
+	text-align:center;
+	font-size: 20px;
+	line-height: 1;
+	
+}
+
+.impress-enabled .step {
+    margin: 0;
+	transition: opacity 1s; 
+    opacity: 0.4;
+	filter: grayscale(70%) blur(2px);
+/*	-webkit-filter: grayscale(70%) blur(2px); */
+}
+
+.impress-enabled .step.active { 
+	opacity: 1; 
+ 	filter: grayscale(0%) ;
+	-webkit-filter: grayscale(0%); 
+}
+
+.impress-enabled .step.future{
+}
+
+p{
+	margin:0;
+	padding:0;
+	margin:0;
+
+}
+
+#ing { 
+	width: 500px 
+}
+
+#ing b {
+    display: inline-block;
+    transition: 0.5s;
+}
+
+#ing.present .positioning {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+#ing.present .rotating {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+	transition-delay: 0.25s;
+    -webkit-transition-delay: 0.25s;
+}
+
+#ing.present .scaling {
+    -webkit-transform: scale(0.7);
+	transform: scale(0.7);
+    transition-delay:         0.5s;
+    -webkit-transition-delay: 0.5s;
+}
+/*obsluga Xmindowych figur*/
+.fishead_left{ 
+    border-top-left-radius: 50%; 
+    border-top-right-radius: 3px; 
+    border-bottom-left-radius: 50%; 
+    border-bottom-right-radius: 3px; 
+}
+
+.fishead_right{ 
+    border-top-right-radius: 50%; 
+    border-top-left-radius: 3px; 
+    border-bottom-right-radius: 50%; 
+    border-bottom-left-radius: 3px; 
+}
+
+.callout_rect {
+	position: relative;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.callout_rect:after {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 15px 15px 0;
+/*nie wiem jak się dobrać do tego elementu z poziomu HTML-a*/
+	border-color: #063 transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	bottom: -15px;
+	left: 32px;
+}
+
+.callout_ellipse {
+	position: relative;
+	-webkit-border-radius: 80px;
+	-moz-border-radius: 80px;
+	border-radius: 80px;
+}
+
+.callout_ellipse:after {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 15px 15px 0;
+/*nie wiem jak się dobrać do tego elementu z poziomu HTML-a*/
+	border-color: #063 transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	bottom: -15px;
+	left: 82px;
+}
+
+.underlined{
+/*wartość :width:320px;trzeba podawać albo musi być zdefiniowana w ciele innej klasy*/
+	border-bottom-style: solid;
+	border-bottom-width: 10px;
+}
+
+.no_border{
+/*wartość :width:320px; trzeba podawać albo musi być zdefiniowana w ciele innej klasy*/
+	background: transparent;
+	border: 0px
+}
+
+
+.rectangle{ 
+    border-top-left-radius: 3px; 
+    border-top-right-radius: 3px; 
+    border-bottom-left-radius: 3px; 
+    border-bottom-right-radius: 3px; 
+}
+
+.ellipse{ 
+    border-top-left-radius: 50%; 
+    border-top-right-radius: 50%; 
+    border-bottom-left-radius: 50%; 
+    border-bottom-right-radius: 50%; 
+}
+ 
+/*.diamond{ 
+    position: relative; 
+    height: 200px; 
+    width: 200px; 
+    background-color: #428BCA; 
+    -webkit-transform: rotate(45deg) skew(0deg); 
+    transform: rotate(45deg) skew(0deg);
+}*/
+
+.button{ 
+    width: 320px; 
+	padding: 30px;
+	box-sizing:border-box;	
+    text-align: center; 
+    color: #FFFFFF; 
+    font-family: 'Lobster', sans-serif; 
+    font-size: 40px; 
+    background-color: #599BB3; 
+    border-width: 0px; 
+    border-color: #FFFFFF; 
+    border-radius: 15px; 
+    box-shadow: 0px 10px 14px -7px #276873;
+	line-height: 1;	
+}
+
+
+
+
