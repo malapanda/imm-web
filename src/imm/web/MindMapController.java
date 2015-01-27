@@ -53,7 +53,7 @@ public class MindMapController {
 
 	private Configuration prepareAlgorithmConfig() {
 		String prefix = String.format("%s/%s/%s", config.uploadsUrlPath, getUploadDir().getName(), RESOURCES_DIR_NAME);
-		return new Configuration(370, 100, 0, prefix);
+		return new Configuration(380, 130, 0, prefix);
 	}
 	
 	public void upload(FileItem item) throws IOException {

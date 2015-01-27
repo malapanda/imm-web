@@ -30,6 +30,8 @@ public class MainServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException {
+		response.setContentType("text/html; charset=utf-8");
+		response.setCharacterEncoding("UTF-8");
 		MindMapController controller = new MindMapController(config, request.getSession());
 		try {
 			if(!controller.generateMindMap(response.getWriter())) {
@@ -41,6 +43,8 @@ public class MainServlet extends HttpServlet {
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException {
+		response.setContentType("text/html; charset=utf-8");
+		response.setCharacterEncoding("UTF-8");
 		MindMapController controller = new MindMapController(config, request.getSession());
 		DiskFileItemFactory factory = new DiskFileItemFactory();
 		ServletContext servletContext = this.getServletConfig().getServletContext();
