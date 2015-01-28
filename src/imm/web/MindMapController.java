@@ -4,8 +4,8 @@ package imm.web;
 import imm.impress.beans.MindMap;
 import imm.impress.generator.MindMapGenerator;
 import imm.xmind.adapter.WorkbookLoader;
-import imm.xmind.algorithm.Configuration;
-import imm.xmind.algorithm.SimpleAlgorithm;
+import imm.xmind.algorithm.ImmConfiguration;
+import imm.xmind.algorithm.ImmAlgorithm;
 import imm.xmind.beans.XmindWorkbook;
 
 import java.io.File;
@@ -44,16 +44,16 @@ public class MindMapController {
 			return false;
 		}
 		XmindWorkbook workbook = new XmindWorkbook(WorkbookLoader.loadWorkbook(file));
-		SimpleAlgorithm simpleAlgorithm = new SimpleAlgorithm(workbook, prepareAlgorithmConfig());
+		ImmAlgorithm simpleAlgorithm = new ImmAlgorithm(workbook, prepareAlgorithmConfig());
 		MindMap mindMap = simpleAlgorithm.generate();
 		MindMapGenerator generator = new MindMapGenerator(config.mindMapTemplateName, config.resourcesDir);		
 		generator.generateMindMap(mindMap, printWriter);
 		return true;
 	}
 
-	private Configuration prepareAlgorithmConfig() {
+	private ImmConfiguration prepareAlgorithmConfig() {
 		String prefix = String.format("%s/%s/%s", config.uploadsUrlPath, getUploadDir().getName(), RESOURCES_DIR_NAME);
-		return new Configuration(380, 130, 0, prefix);
+		return new ImmConfiguration(380, 130, 0, prefix);
 	}
 	
 	public void upload(FileItem item) throws IOException {
